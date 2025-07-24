@@ -14,11 +14,13 @@ func main() {
 	sum := num1 + num2
 	difference := num1 - num2
 	product := num1 * num2
+	division := num1 / num2
 
-	fmt.Println(sum)
+	fmt.Println("Sum =", sum)
 
-	fmt.Println(difference)
+	fmt.Println("Subtraction =", difference)
 
-	fmt.Println(product)
+	fmt.Println("Multiplication =", product)
 
+	fmt.Println("Division =", division)
 }
