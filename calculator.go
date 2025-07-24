@@ -1,24 +1,28 @@
+
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	var num1, num2, result float64
+	var num1, num2 float64
 	var operator string
 
-	fmt.Println("Simpe Calculator using Golang")
-
-	fmt.Println("Enter first number: ")
+	fmt.Println("Simple Calculator using Golang")
+	
+	fmt.Print("Enter first number: ")
 	fmt.Scanln(&num1)
 
-	fmt.Println("Enter second number: ")
-	fmt.Scanln(&num2)
-
-	fmt.Println("Enter operator (+, -, *, /): ")
+	fmt.Print("Enter operator (+, -, *, /): ")
 	fmt.Scanln(&operator)
 
-	switch operator {
+	fmt.Print("Enter second number: ")
+	fmt.Scanln(&num2)
 
+	var result float64
+	switch operator {
 	case "+":
 		result = num1 + num2
 	case "-":
@@ -26,17 +30,14 @@ func main() {
 	case "*":
 		result = num1 * num2
 	case "/":
-		if num2 != 0 {
-			result = num1 / num2
-		} else {
+		if num2 == 0 {
 			fmt.Println("Error: Division by zero is not possible...")
-			return
+			os.Exit(1)
 		}
-
+		result = num1 / num2
 	default:
-		fmt.Println("Invalifd operator")
-		return
-
+		fmt.Println("Invalid operator...")
+		os.Exit(1)
 	}
 
 	fmt.Printf("Result: %.2f\n", result)
