@@ -8,7 +8,7 @@ import (
 
 func main() {
 	rand.Seed(time.Now().UnixNano()) // Generate random
-	target := rand.Intn(10) + 1      // Setting the limit (1-19)
+	target := rand.Intn(10) + 1      // Setting the limit (1-10)
 	var guess int
 
 	fmt.Println("Guess the number Game!!")
