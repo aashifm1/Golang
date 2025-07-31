@@ -18,6 +18,7 @@ This repository contains my basic Go (Golang) practice programs. It's meant for 
 - Calculator
 - Game (Guess the number)
 - Password Generator
+- URL Shortener
 
 
 ## Execution
